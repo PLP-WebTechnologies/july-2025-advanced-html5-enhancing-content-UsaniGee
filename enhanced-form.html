@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Sign Up Form</title>
+</head>
+<body>
+    <header>
+        <h1>School Sign Up</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#form-section">Sign Up Form</a></li>
+                <li><a href="#requirements">Requirements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Sign Up Form</h2>
+            <form action="/submit-signup" method="post" autocomplete="on" aria-labelledby="form-section">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <ul>
+                        <li>
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autocomplete="name">
+                        </li>
+                        <li>
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </li>
+                        <li>
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="other">Other</option>
+                                <option value="prefer_not_to_say">Prefer not to say</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="photo">Upload Photo:</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" aria-describedby="photo-desc">
+                            <span id="photo-desc">Accepted formats: jpg, png, gif</span>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <ul>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="email">
+                        </li>
+                        <li>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +2348012345678" pattern="^\+?\d{10,15}$" required autocomplete="tel">
+                        </li>
+                        <li>
+                            <label for="address">Home Address:</label>
+                            <textarea id="address" name="address" rows="2" placeholder="Enter your address" required autocomplete="street-address"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>School Information</legend>
+                    <ul>
+                        <li>
+                            <label for="school-name">School Name:</label>
+                            <input type="text" id="school-name" name="school-name" placeholder="Enter school name" required autocomplete="organization">
+                        </li>
+                        <li>
+                            <label for="grade">Grade/Class:</label>
+                            <input type="text" id="grade" name="grade" placeholder="e.g. Grade 10" required>
+                        </li>
+                        <li>
+                            <label for="student-id">Student ID:</label>
+                            <input type="text" id="student-id" name="student-id" placeholder="Enter student ID" required readonly value="Auto-generated after registration">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Setup</legend>
+                    <ul>
+                        <li>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" placeholder="Choose a username" required autocomplete="username">
+                        </li>
+                        <li>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8" autocomplete="new-password">
+                        </li>
+                        <li>
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required minlength="8" autocomplete="new-password">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <ul>
+                        <li>
+                            <label for="newsletter">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                Subscribe to newsletter
+                            </label>
+                        </li>
+                        <li>
+                            <label for="terms">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                I agree to the <a href="#requirements">terms and conditions</a>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <section id="requirements">
+            <h2>Requirements</h2>
+            <table>
+                <caption>Required Documents</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Document</th>
+                        <th scope="col">Format</th>
+                        <th scope="col">Mandatory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Birth Certificate</td>
+                        <td>PDF/JPG</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Passport Photo</td>
+                        <td>JPG/PNG</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Previous School Report</td>
+                        <td>PDF</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <address>
+                <strong>School Admissions Office</strong><br>
+                123 School Lane, City, Country<br>
+                Email: <a href="mailto:admissions@school.edu">admissions@school.edu</a><br>
+                Phone: <a href="tel:+2348012345678">+2348012345678</a>
+            </address>
+            <figure>
+                <figcaption>Our School Campus</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitTechy Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
